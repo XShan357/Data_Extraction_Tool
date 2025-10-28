@@ -1,7 +1,8 @@
 # Data_Extraction_Tool
 Extract data you desired from selected files and combine into a new sheet
+
 ## Business Problem
-As a former PwC Risk Consultant, I frequently faced the challenge of consolidating data from multiple Excel files. This manual process took 2-3 days each month and was prone to errors.
+As a former Risk Consultant, I frequently faced the challenge of consolidating data from multiple Excel files. This manual process took 2-3 days each month and was prone to errors.
 
 ## Solution
 This VBA tool automates the extraction of specific KPIs from multiple Excel files into a standardized format, reducing processing time from days to minutes.
@@ -17,18 +18,20 @@ This VBA tool automates the extraction of specific KPIs from multiple Excel file
 - **Accuracy**: Eliminated manual copy-paste errors
 - **Scalability**: Easily adapts to new KPIs or file structures
 
-## How It Works
-1. Create KPI mapping table in Excel
-2. Run the macro and select folder containing source files
-3. Tool automatically extracts specified cells into consolidated report
+## 🛠 Installation & Usage
 
-## Technical Stack
-- Excel VBA for automation
-- Configurable without coding knowledge
-- Designed for business users
+### For Excel Users:
+1. Open Excel and press `Alt + F11` to open VBA Editor
+2. Insert a new Module
+3. Copy and paste the code from `src/KPI_Extraction_Tool.vba`
+4. Create a "KPI_Mapping" sheet with your KPI configurations
+5. Run the `ExtractByCellMapping` macro
 
-## Use Cases
-- Risk reporting consolidation
-- Financial control monitoring
-- Compliance data aggregation
-- Multi-entity performance reporting
+### KPI Mapping Format:
+Create an Excel sheet named "KPI_Mapping":
+```csv
+KPI_Name,Cell_Address
+Revenue,B5
+Profit,C8
+Growth_Rate,F12
+```
